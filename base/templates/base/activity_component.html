@@ -2,7 +2,7 @@
 <hr>
 {% for mess in messages %}
 <div>
-    <small>@{{mess.user}} {{mess.created|timesince}} </small>
+    <small><a href="{% url 'user-profile' mess.user.id %}"> @{{mess.user}}</a> {{mess.created|timesince}}  </small>
     <small> replied to "{{mess.room}}" </small>
 
     <p> {{mess}} </p>
